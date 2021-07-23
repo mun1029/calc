@@ -1,0 +1,2 @@
+class Roon < ApplicationRecord
+end
