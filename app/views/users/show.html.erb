@@ -11,9 +11,9 @@
 </header>
 <div class='contents'>
   <div class='user-info'>
-    プロフィール画像
+    <%= image_tag current_user.image.variant(resize: '200x200'), class: 'hidden' if current_user.image.attached? %>
     <p><span class='info'>ユーザー名 :</span> <%= current_user.nickname %></p>
-    <p><span class='info'>年齢 :</span> 
-    <p><span class='info'>性別 :</span>
+    <p><span class='info'>年齢 :</span> <%= current_user.age %></p>
+    <p><span class='info'>性別 :</span> <%= current_user.gender %></p>
   </div>
 </div>
