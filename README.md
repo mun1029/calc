@@ -12,7 +12,6 @@
 has_many :lists
 has_many :user_rooms
 has_many :messages
-has_one :schedule
 
 ## rooms
 
@@ -48,7 +47,7 @@ belongs_to :list
 belongs_to :user
 belongs_to :room
 
-## lists
+## lists 
 
 | Column    | Type           | Options                        |
 | --------- | -------------- | ------------------------------ |
@@ -59,14 +58,4 @@ belongs_to :room
 
 ### Association
 has_many :user_rooms
-belongs_to :user
-
-## schedules
-
-| Column    | Type           | Options                        |
-| --------- | -------------- | ------------------------------ |
-| user      | references     | null: false, foreign_key: true |
-| schedule  | text           | null: false                    |
-
-### Association
 belongs_to :user

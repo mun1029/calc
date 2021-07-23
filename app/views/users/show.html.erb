@@ -1,0 +1,19 @@
+<div class='header-top-lain'>
+</div>
+<header class='my-page-header'>
+  <%= link_to image_tag("logo.png", class:"logo"), root_path %>
+  <ul class='left-list'>
+    <li>ルーム作成</li>
+  </ul>
+  <ul class='right-list'>
+     <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+  </ul>
+</header>
+<div class='contents'>
+  <div class='user-info'>
+    プロフィール画像
+    <p><span class='info'>ユーザー名 :</span> <%= current_user.nickname %></p>
+    <p><span class='info'>年齢 :</span> 
+    <p><span class='info'>性別 :</span>
+  </div>
+</div>
