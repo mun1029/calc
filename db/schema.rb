@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_24_123347) do
+ActiveRecord::Schema.define(version: 2021_07_24_124652) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -31,6 +31,29 @@ ActiveRecord::Schema.define(version: 2021_07_24_123347) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "lists", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "list_name", null: false
+    t.string "name1"
+    t.string "name2"
+    t.string "name3"
+    t.string "name4"
+    t.string "name5"
+    t.string "name6"
+    t.string "name7"
+    t.string "name8"
+    t.string "name9"
+    t.string "name10"
+    t.string "name11"
+    t.string "name12"
+    t.string "name13"
+    t.string "name14"
+    t.string "name15"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_lists_on_user_id"
   end
 
   create_table "room_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -64,6 +87,7 @@ ActiveRecord::Schema.define(version: 2021_07_24_123347) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "lists", "users"
   add_foreign_key "room_users", "rooms"
   add_foreign_key "room_users", "users"
 end
