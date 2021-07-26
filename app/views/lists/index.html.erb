@@ -1,23 +1,34 @@
-<%= link_to 'リスト作成', new_user_list_path %>
+<%= link_to 'リスト作成', new_list_path %>
 <% @lists.each do |list| %>
-  <div class='lists'>
+  <div class='lists-rap'>
     <div class='list-name'>
       <%= list.list_name%>
     </div>
-    <%= list.name1 %>
-    <%= list.name2 %>
-    <%= list.name3 %>
-    <%= list.name4 %>
-    <%= list.name5 %>
-    <%= list.name6 %>
-    <%= list.name7 %>
-    <%= list.name8 %>
-    <%= list.name9 %>
-    <%= list.name10 %>
-    <%= list.name11 %>
-    <%= list.name12 %>
-    <%= list.name13 %>
-    <%= list.name14 %>
-    <%= list.name15 %>
+    <div class='list'>
+      <%= list.name1 %>
+      <%= list.name2 %>
+      <%= list.name3 %>
+      <%= list.name4 %>
+      <%= list.name5 %>
+      <%= list.name6 %>
+      <%= list.name7 %>
+      <%= list.name8 %>
+      <%= list.name9 %>
+      <%= list.name10 %>
+      <%= list.name11 %>
+      <%= list.name12 %>
+      <%= list.name13 %>
+      <%= list.name14 %>
+      <%= list.name15 %>
+    </div>
+    <div class='list-botan'>
+      <ul class='botan'>
+        <li>
+          <%= link_to '編集', edit_list_path%>
+        </li>
+        <li>
+        </li>
+      </ul>
+    </div>
   </div>
 <% end %>
