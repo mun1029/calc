@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
 
   def index
-    @lists = List.where(user_id: current_user.id)
+    @lists = current_user.lists
   end
 
   def new
@@ -17,7 +17,18 @@ class ListsController < ApplicationController
     end
   end
 
+  def destroy
+    list = List.find(params[:id])
+    list.destroy
+  end
+
   def edit
+    @list = List.find(params[:id])
+  end
+
+  def update
+    list = List.find(params[:id])
+    list.update(list_params)
   end
 
 
