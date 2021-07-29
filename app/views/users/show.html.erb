@@ -3,7 +3,7 @@
 <header class='my-page-header'>
   <%= link_to image_tag("logo.png", class:"logo"), root_path %>
   <ul class='left-list'>
-    <li>ルーム作成</li>
+    <li><%= link_to 'ルーム作成', new_room_path %></li>
     <li><%= link_to 'リスト一覧',  lists_path %></li>
   </ul>
   <ul class='right-list'>

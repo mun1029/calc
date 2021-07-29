@@ -14,11 +14,10 @@
           <div class='form-text-rap'>
             <label class='form'>参加者リスト</label>
             <span class="indispensable">(必須)</span>
+            <%= f.select :list_id, @lists.map { |list| [ list.list_name, list.id] }, { include_blank: 'リスト選択' } %>
           </div>
-          <%# f.select :list %>
         </div>
       <% end %>
     </div>
   </div>
-  
 </div>
