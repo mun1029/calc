@@ -1,6 +1,6 @@
 参加者リスト作成
 <div class='new-list'>
-  <%= form_with model: @list, url: lists_path do |f| %>
+  <%= form_with model: @list, url: lists_path, local: true do |f| %>
   <%= f.text_field :list_name, placeholder:"リスト名" %>
   <div class='list-form'>
     <%= f.text_field :name1, placeholder:"参加者名" %>

@@ -32,12 +32,17 @@
 .contents {
   background-color: gray;
   height: 100vh;
-  padding: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .user-info {
   background-color:white;
-  height: 200px;
-  width: 60%;
-  
+  height: 300px;
+  width: 20%;
+  text-align: center;
+  padding-top: 20px;
 }
+
+
