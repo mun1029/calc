@@ -1,0 +1,6 @@
+<div class='content'>
+  <%= form_with model: @room, url:   room_messages_path(@room), local: true, method: :get do |f| %>
+    <%= f.text_field :name %>
+    <%= f.submit "入室" %>
+  <% end %>
+</div>

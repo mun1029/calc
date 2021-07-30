@@ -28,7 +28,6 @@ has_many :messages
 | -------- | -------------- | ------------------------------ |
 | user     | references     | null: false, foreign_key: true |
 | room     | references     | null: false, foreign_key: true |
-| list     | references     | null: false, foreign_key: true |
 
 ### Association
 belongs_to :user
@@ -55,6 +54,7 @@ belongs_to :room
 | num       | integer        | null: false                    |
 | name      | string         | null: false                    |
 | list_name | string         | null: false                    |
+| list      | references     | null: false, foreign_key: true |
 
 ### Association
 has_many :user_rooms
