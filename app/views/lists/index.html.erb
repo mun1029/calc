@@ -1,5 +1,5 @@
 <%= link_to 'リスト作成', new_list_path %>
-  
+  <%= flash[:update] %>
     <% @lists.each do |list| %>
       <div class='lists-rap'>
         <div class='list-name'>

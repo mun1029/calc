@@ -1,5 +1,4 @@
 class ListsController < ApplicationController
-  
 
   def index
     @lists = current_user.lists
@@ -21,6 +20,7 @@ class ListsController < ApplicationController
   def destroy
     list = List.find(params[:id])
     list.destroy
+    redirect_to lists_path
   end
 
   def edit
@@ -29,7 +29,12 @@ class ListsController < ApplicationController
 
   def update
     list = List.find(params[:id])
-    list.update(list_params)
+    if list.update(list_params)
+      redirect_to lists_path
+      flash[:update] = "編集が完了しました。"
+    else
+      render :edit
+    end
   end
 
 
