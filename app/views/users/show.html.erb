@@ -3,17 +3,18 @@
 <header class='my-page-header'>
   <%= link_to image_tag("logo.png", class:"logo"), root_path %>
   <ul class='left-list'>
-    <li><%= link_to 'ルーム作成', new_room_path %></li>
-    <li><%= link_to 'リスト一覧',  lists_path %></li>
+    <li><%= link_to 'ルーム作成', new_room_path, class: "link" %></li>
+    <li><%= link_to 'リスト作成', new_list_path, class: "link" %></li>
   </ul>
   <ul class='right-list'>
-     <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+    <li><%= current_user.nickname %></li>
+    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
   </ul>
 </header>
 <div class='contents'>
   <div class='user-info'>
    <div class='image-rap'>
-      <%= image_tag current_user.image.variant(resize: '200x200'), class: 'hidden' if current_user.image.attached? %>
+      <%= image_tag current_user.image.variant(resize: '280x280'), class: 'hidden' if current_user.image.attached? %>
     </div>
     <div class='user-rap'>
       <p><span class='info'>ユーザー名 :</span> <%= current_user.nickname %></p>
@@ -22,13 +23,19 @@
     </div>
   </div>
   <div class="rooms">
-  <% current_user.rooms.each do |room| %>
-    <div class="room">
-      <div class="room-name">
-        <%= link_to room.name, room_messages_path(room) %>
-        <%= link_to '参加者用ページを作成', room_path(room.id) %>
+    <p> ルーム一覧 </p>
+    <% current_user.rooms.each do |room| %>
+      <div class="room">
+          <%= link_to room.name, room_path(room.id), class: "link" %>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
+  <div class="lists">
+    <p>リスト一覧</P>
+    <% current_user.lists.each do |list| %>
+      <div class="list">
+          <%= list.list_name %>
+      </div>
+    <% end %>
+  </div>
 </div>
-------------

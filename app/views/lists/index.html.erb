@@ -1,5 +1,8 @@
+<%= render "shared/header" %>
 <%= link_to 'リスト作成', new_list_path %>
   <%= flash[:update] %>
+  <%= flash[:destroy] %>
+  <%= flash[:notDestroy] %>
     <% @lists.each do |list| %>
       <div class='lists-rap'>
         <div class='list-name'>

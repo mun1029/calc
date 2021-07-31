@@ -19,8 +19,13 @@ class ListsController < ApplicationController
 
   def destroy
     list = List.find(params[:id])
-    list.destroy
-    redirect_to lists_path
+    if list.destroy
+      redirect_to lists_path
+      flash[:destroy] = "削除が完了しました"
+    else
+      redirect_to lists_path
+      flash[:notDestroy] = "選択されたリストは使用されています"
+    end
   end
 
   def edit
@@ -31,7 +36,7 @@ class ListsController < ApplicationController
     list = List.find(params[:id])
     if list.update(list_params)
       redirect_to lists_path
-      flash[:update] = "編集が完了しました。"
+      flash[:update] = "編集が完了しました"
     else
       render :edit
     end

@@ -20,14 +20,20 @@
   margin-top: 5px;
 }
 
-.right-list {
-  margin-right: 10px;
+.left-list li {
+  padding-left: 15px;
+  display: inline;
 }
 
-.logout {
+.link, .logout {
+  font-size: 17px;
   text-decoration: none;
-  font-size: 15px;
 }
+
+.right-list {
+  margin-right: 18px;
+}
+
 
 .contents {
   background-color: gray;
@@ -37,12 +43,26 @@
   justify-content: space-around;
 }
 
-.user-info {
+.user-info, .rooms, .lists {
   background-color:white;
-  height: 300px;
-  width: 20%;
-  text-align: center;
-  padding-top: 20px;
+  height: 350px;
+  width: 30%;
+  padding-top: 25px;
 }
 
+.user-rap {
+  height: 100px;
+  margin: 10px 0px 0px 20px;
+}
 
+.info {
+  font-size: 18px;
+}
+
+.rooms, .lists, .image-rap {
+  text-align: center;
+}
+
+.hidden {
+  width: 25vw;
+}
