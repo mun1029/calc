@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
 
-  def index
-    @lists = current_user.lists
+  def show
+    @list = List.find(params[:id])
   end
 
   def new
@@ -20,10 +20,10 @@ class ListsController < ApplicationController
   def destroy
     list = List.find(params[:id])
     if list.destroy
-      redirect_to lists_path
+      redirect_to list_path
       flash[:destroy] = "削除が完了しました"
     else
-      redirect_to lists_path
+      redirect_to list_path
       flash[:notDestroy] = "選択されたリストは使用されています"
     end
   end

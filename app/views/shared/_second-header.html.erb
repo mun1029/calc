@@ -1,0 +1,13 @@
+<div class='header-top-lain'>
+</div>
+<header class='my-page-header'>
+  <%= link_to image_tag("logo.png", class:"logo"), root_path %>
+  <ul class='left-list'>
+    <li><%= link_to 'ルーム作成', new_room_path, class: "link" %></li>
+    <li><%= link_to 'リスト作成', new_list_path, class: "link" %></li>
+  </ul>
+  <ul class='right-list'>
+    <li><%= current_user.nickname %></li>
+    <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+  </ul>
+</header>
