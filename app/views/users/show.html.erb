@@ -1,5 +1,5 @@
 <%= render "shared/second-header" %>
-<div class='contents'>
+<div class='user-show-contents'>
   <div class='user-info'>
    <div class='image-rap'>
       <%= image_tag current_user.image.variant(resize: '280x280'), class: 'hidden' if current_user.image.attached? %>
@@ -10,20 +10,24 @@
       <p><span class='info'>性別 :</span> <%= current_user.gender %></p>
     </div>
   </div>
-  <div class="rooms">
-    <p> ルーム一覧 </p>
-    <% current_user.rooms.each do |room| %>
-      <div class="room">
-          <%= link_to room.name, room_path(room.id), class: "link" %>
-      </div>
-    <% end %>
-  </div>
-  <div class="lists">
-    <p>リスト一覧</P>
-    <% current_user.lists.each do |list| %>
+  <div class=" right-content">
+    <div class="rooms">
+      <p> ルーム一覧 </p>
+      <% current_user.rooms.each do |room| %>
+        <div class="room">
+            <%= link_to room.name, room_path(room.id), class: "link" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="lists">
+      <p>リスト一覧</P>
       <div class="list">
+        <%= flash[:notDestroy] %>
+        <%= flash[:destroy] %>
+        <% current_user.lists.each do |list| %>
           <%= link_to list.list_name, list_path(list.id) %>
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>

@@ -1,17 +1,17 @@
 class ListsController < ApplicationController
-
+  before_action :set_list, only: [:show]
   def show
-    @list = List.find(params[:id])
+    #@list = List.find(params[:id])
   end
 
   def new
     @list = List.new
   end
-
+ 
   def create
     @list = List.new(list_params)
     if @list.save
-      redirect_to lists_path
+      redirect_to user_path(id: current_user)
     else
       render :new
     end
@@ -20,10 +20,10 @@ class ListsController < ApplicationController
   def destroy
     list = List.find(params[:id])
     if list.destroy
-      redirect_to list_path
+      redirect_to user_path
       flash[:destroy] = "削除が完了しました"
     else
-      redirect_to list_path
+      render :show
       flash[:notDestroy] = "選択されたリストは使用されています"
     end
   end
@@ -35,7 +35,7 @@ class ListsController < ApplicationController
   def update
     list = List.find(params[:id])
     if list.update(list_params)
-      redirect_to lists_path
+      redirect_to list_path
       flash[:update] = "編集が完了しました"
     else
       render :edit
@@ -44,6 +44,10 @@ class ListsController < ApplicationController
 
 
   private
+
+  def set_list
+    @list = List.find(params[:id])
+  end
 
   def list_params
     params.require(:list).permit(:list_name, :name1, :name2, :name3, :name4, :name5, :name6, 
