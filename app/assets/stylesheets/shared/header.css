@@ -1,5 +1,5 @@
 .header-top-lain {
-  background-color: grey;
+  background-color: rgb(235, 45, 45);
   height: 15px;
 }
 
@@ -27,6 +27,7 @@
 
 .link, .logout {
   font-size: 17px;
+  color: black;
   text-decoration: none;
 }
 

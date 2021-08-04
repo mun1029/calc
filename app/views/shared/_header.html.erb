@@ -5,7 +5,7 @@
   <ul class='right-list'>
     <% if user_signed_in? %>
       <ul class='right-list'>
-        <li><%= link_to current_user.nickname, user_path(current_user.id), class: "link"%></li>
+        <li><%= link_to current_user.nickname, user_path(current_user), class: "link"%></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
       </li>
     <% else %>

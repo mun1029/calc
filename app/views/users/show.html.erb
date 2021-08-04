@@ -1,18 +1,33 @@
+<% case @user.framework.framework_id %>
+<% when 1 %>
+  <%= stylesheet_link_tag "framework/simple", :media => "all" %>
+<% when 2 %>
+    <%= stylesheet_link_tag "framework/colk", :media => "all" %>
+<% when 3 %>
+    <%= stylesheet_link_tag "framework/cat", :media => "all" %>
+<% end %> 
+
 <%= render "shared/second-header" %>
 <div class='user-show-contents'>
   <div class='user-info'>
-   <div class='image-rap'>
-      <%= image_tag current_user.image.variant(resize: '280x280'), class: 'hidden' if current_user.image.attached? %>
+    <%= render 'follow_form' %>
+    <%= render 'stats' %>
+    <div class='image-rap'>
+      <% if @user.image.present? %>
+        <%= image_tag user.image.variant(resize: '280x280'), class: 'hidden' if current_user.image.attached? %>
+      <% else %>
+        <%= image_tag "logo.png", class: 'hidden' %>
+      <% end%>
     </div>
     <div class='user-rap'>
-      <p><span class='info'>ユーザー名 :</span> <%= current_user.nickname %></p>
-      <p><span class='info'>年齢 :</span> <%= current_user.age %></p>
-      <p><span class='info'>性別 :</span> <%= current_user.gender %></p>
+      <p><span class='info'>ユーザー名 :</span> <%= @user.nickname %></p>
+      <p><span class='info'>年齢 :</span> <%= @user.age %></p>
+      <p><span class='info'>性別 :</span> <%= @user.gender %></p>
     </div>
   </div>
   <div class=" right-content">
     <div class="rooms">
-      <p> ルーム一覧 </p>
+      <p> 投稿日記 </p>
       <% current_user.rooms.each do |room| %>
         <div class="room">
             <%= link_to room.name, room_path(room.id), class: "link" %>
@@ -20,7 +35,7 @@
       <% end %>
     </div>
     <div class="lists">
-      <p>リスト一覧</P>
+      <p>つぶやき</P>
       <div class="list">
         <%= flash[:notDestroy] %>
         <%= flash[:destroy] %>
@@ -31,3 +46,4 @@
     </div>
   </div>
 </div>
+

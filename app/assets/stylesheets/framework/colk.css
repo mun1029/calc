@@ -1,10 +1,15 @@
+.user-show-contents, .stats {
+  display: flex;
+  justify-content: center;
+}
+
+
 .user-show-contents {
   background-image: url("/images/CorkBoard02.jpg");
   height: 100vh;
   width: 100%;
   padding: 20px;
-  display: flex;
-  justify-content: center;
+  
 }
 
 .user-info {
@@ -65,4 +70,12 @@
 
 .hidden {
   width: 25vw;
+}
+
+.stats p {
+  
+}
+
+.followings {
+  margin-right: 15px;
 }

@@ -1,0 +1,63 @@
+.user-show-contents {
+
+}
+
+.user-info {
+  background-color:white;
+  height: 370px;
+  width: 30%;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-radius: 8px;
+  transform:rotate(-4deg);
+  border: rgb(105, 35, 35) solid 4px;
+  
+}
+
+.right-content {
+  height: 30px;
+  width: 40%;
+  display: block;
+  margin-left: 50px;
+  padding-top: 30px;
+}
+
+.rooms, .lists {
+  background-color: rgb(5, 5, 5);
+  height: 250px;
+  width: 80%;
+  padding-top: 25px;
+  border-radius: 8px;
+  border: rgb(105, 35, 35) solid 4px;
+  
+}
+
+.rooms p, .lists p {
+  font-size: 18px;
+}
+
+.rooms {
+  transform:rotate(5deg);
+}
+
+.lists{
+  transform:rotate(-3deg);
+  margin-top: 45px;
+}
+
+.user-rap {
+  height: 100px;
+  margin: 10px 0px 0px 20px;
+}
+
+.info {
+  font-size: 18px;
+}
+
+.rooms, .lists, .image-rap {
+  text-align: center;
+}
+
+.hidden {
+  width: 25vw;
+}
