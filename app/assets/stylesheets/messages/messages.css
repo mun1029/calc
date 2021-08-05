@@ -1,0 +1,58 @@
+.warpper {
+  display: flex;
+  align-items: flex-end;
+}
+
+.side-bar {
+  background-color: chartreuse;
+  height: 100vh;
+  width: 150px;
+}
+.side-content {
+  background-color: gray;
+
+  text-align: center;
+}
+
+.user-list, .user-name {
+  padding-top: 10px;
+}
+
+
+.side-bottom {
+  font-size: 18px;
+  position: absolute;
+  bottom: 0;
+  padding: 0px 5px 5px;
+}
+
+.chat {
+  width: 100vw;
+  background-color: cadetblue;
+}
+
+.messages {
+  background-color: #FAFAFA;
+  height: calc(100vh  - 90px);
+}
+
+.form {
+  background-color: black;
+  height: 90px;
+  display: flex;
+  padding: 25px 40px;
+}
+
+.form-input {
+  width: 100%;
+}
+.form-message {
+  height: 40px;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.form-submit {
+  margin-left: 15px;
+}
+

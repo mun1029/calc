@@ -3,6 +3,13 @@
   justify-content: center;
 }
 
+.user-info, .hidden, .rooms, .lists {
+  border-radius: 8px;
+}
+
+.user-info, .rooms, .lists, .my-page-header {
+  background-color:white;
+}
 
 .user-show-contents {
   background-image: url("/images/CorkBoard02.jpg");
@@ -13,12 +20,10 @@
 }
 
 .user-info {
-  background-color:white;
   height: 370px;
   width: 30%;
   margin-top: 60px;
   padding-top: 40px;
-  border-radius: 8px;
   transform:rotate(-4deg);
   border: rgb(105, 35, 35) solid 4px;
   
@@ -33,13 +38,10 @@
 }
 
 .rooms, .lists {
-  background-color: white;
   height: 250px;
   width: 80%;
   padding-top: 25px;
-  border-radius: 8px;
   border: rgb(105, 35, 35) solid 4px;
-  
 }
 
 .rooms p, .lists p {
@@ -72,10 +74,47 @@
   width: 25vw;
 }
 
-.stats p {
-  
-}
 
 .followings {
   margin-right: 15px;
+}
+
+.header-top-lain {
+  background-color: grey;
+  height: 15px;
+}
+
+.my-page-header {
+  height: 70px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid blue 2px;
+}
+
+.logo {
+  height: 65px;
+  width: 80px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+}
+
+.left-list li {
+  padding-left: 15px;
+  display: inline;
+}
+
+.link, .logout {
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.right-list {
+  margin-right: 18px;
 }

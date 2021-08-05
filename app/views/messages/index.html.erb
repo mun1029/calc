@@ -1,24 +1,8 @@
-<div class='messages-contents'>
- <div class='side-content'>
-  <div class='list-name'>
-    <ul>
-      <li><%= @room.list.name2 %></li>
-      <li><%= @room.list.name3 %></li>
-      <li><%= @room.list.name4 %></li>
-      <li><%= @room.list.name5 %></li>
-      <li><%= @room.list.name6 %></li>
-      <li><%= @room.list.name7 %></li>
-      <li><%= @room.list.name8 %></li>
-      <li><%= @room.list.name9 %></li>
-      <li><%= @room.list.name10 %></li>
-      <li><%= @room.list.name11 %></li>
-      <li><%= @room.list.name12 %></li>
-      <li><%= @room.list.name13 %></li>
-      <li><%= @room.list.name14 %></li>
-      <li><%= @room.list.name15 %></li>
-    </ul>
+<div class= "warpper">
+  <div class="side-bar">
+    <%= render "side_bar" %>
   </div>
-  <div class= 'side-bottom'>
-    <%= link_to "ルームを閉じる", room_path(@room), method: :delete, class: 'link' %>
- </div>
+  <div class= "chat">
+    <%= render "main_chat" %>
+  </div>
 <div>

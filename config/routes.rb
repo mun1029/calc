@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   root to:'users#index'
   resources :users do
     member do
-      get :following, :followers
+      get :following, :followers,:message
     end
   end
   resources :relationships,       only: [:create, :destroy]

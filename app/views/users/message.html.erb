@@ -1,0 +1,19 @@
+
+<% @user.followings.each do |user| %>
+    <%= form_with model:@room, url: rooms_path, method: :post, local: true do |f| %>
+      <input name="room[name]" type="hidden" value=<%= user.nickname %>>
+
+      <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
+      <input name="room[user_ids][]" type="hidden" value=<%= user.id %>>
+    <%= f.submit user.nickname %>
+    <% end %>
+<% end %>
+ルーム一覧
+<% current_user.rooms.each do |room| %>
+    <div class="room">
+      <div class="room-name">
+        <%= link_to room.name, room_messages_path(room) %>
+      </div>
+    </div>
+<% end %>
+

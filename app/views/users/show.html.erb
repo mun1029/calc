@@ -28,6 +28,7 @@
   <div class=" right-content">
     <div class="rooms">
       <p> 投稿日記 </p>
+      <%= link_to 'ルーム作成', new_room_path %>
       <% current_user.rooms.each do |room| %>
         <div class="room">
             <%= link_to room.name, room_path(room.id), class: "link" %>

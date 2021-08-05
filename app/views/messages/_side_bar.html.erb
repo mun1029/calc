@@ -1,0 +1,15 @@
+<div class='side-content'>
+  <%= image_tag "menu_btn", :size =>'30x30' %>
+  <div class='side-menu'>
+    <div class="user-list">
+      <% @users.each do |user| %>
+        <div class='user-name'>
+          <%= user.nickname %> 
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class= "side-bottom">
+    <%= link_to "ルームから退出", room_path(@room), method: :delete, class: 'link' %>
+  </div>
+</div>
