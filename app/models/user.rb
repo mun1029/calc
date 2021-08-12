@@ -7,8 +7,7 @@ class User < ApplicationRecord
   has_one_attached :image
   has_one :framework
   has_many :messages
-  has_many :lists
-
+  
   has_many :user_rooms
   has_many :rooms, through: :user_rooms
 

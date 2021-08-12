@@ -1,23 +1,26 @@
 .wrapper{
-  width: 100%;
+  display: flex;
 }
 
 .chat {
-  height: calc(100vh - 90px);
-  display: flex;
-  background-image: url("/images/backColor.jpeg"); */
+  width: calc( 100vw - 220px);
+  display: block;
+  background-image: url("/images/backColor.jpeg"); 
 }
- .menu-bar {
-   display: block;
-   height: 100px;
- }
+ 
+.side-bar {
+  background-color: #253141;
+  width: 220px;
+  height: 100vh;
+}
 
-.menu-btn {
-  margin: 5px 0px 0px 45px;
+.rooms {
+  background-color: #2F3E51;
+  height: calc(100vh - 100px);
 }
-.main-content{
-  width: 100%;
-  height: 95%;
+
+.room-name {
+  background-color: greenyellow;
 }
 
 .side-content {
@@ -38,8 +41,7 @@
 }
 
 .messages {
-  margin-top: 25px;
-  height: 80vh;
+  height: calc(100vh  - 90px);
   overflow: scroll;
 }
 
@@ -76,7 +78,6 @@
 .form {
   background-color: black;
   height: 90px;
-  width: 100%;
   display: flex;
   padding: 25px 26px;
 }
@@ -90,12 +91,14 @@
 }
 
 .form-input {
-  width: 100%;
 }
 
+.message-image {
+  width: 200x;
+  height: 200px;
+}
 .form-message {
   height: 40px;
-  width: 100%;
   padding-left: 20px;
 }
 

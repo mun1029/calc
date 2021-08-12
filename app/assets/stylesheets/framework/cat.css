@@ -1,19 +1,28 @@
-.user-show-contents {
-  background-image: url("/images/CorkBoard02.jpg");
-  height: 100vh;
-  width: 100%;
-  padding: 20px;
+.user-show-contents, .stats {
   display: flex;
   justify-content: center;
 }
 
 .user-info {
+  border-radius: 8px;
+}
+
+.user-info {
   background-color:white;
-  height: 370px;
+}
+
+.user-show-contents {
+  background-image: url("/images/CorkBoard02.jpg");
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  
+}
+
+.user-info {
   width: 30%;
   margin-top: 60px;
   padding-top: 40px;
-  border-radius: 8px;
   transform:rotate(-4deg);
   border: rgb(105, 35, 35) solid 4px;
   
@@ -27,28 +36,6 @@
   padding-top: 30px;
 }
 
-.rooms, .lists {
-  background-color: rgb(41, 10, 153);
-  height: 250px;
-  width: 80%;
-  padding-top: 25px;
-  border-radius: 8px;
-  border: rgb(105, 35, 35) solid 4px;
-  
-}
-
-.rooms p, .lists p {
-  font-size: 18px;
-}
-
-.rooms {
-  transform:rotate(5deg);
-}
-
-.lists{
-  transform:rotate(-3deg);
-  margin-top: 45px;
-}
 
 .user-rap {
   height: 100px;
@@ -59,10 +46,50 @@
   font-size: 18px;
 }
 
-.rooms, .lists, .image-rap {
+.image-rap {
   text-align: center;
+}
+
+.user-none-image {
+  height: 180px;
+  width: 180px;
+  border-radius: 70px;
 }
 
 .hidden {
   width: 25vw;
+}
+
+
+.followings {
+  margin-right: 15px;
+}
+
+.header-top-lain {
+  background-color: grey;
+  height: 15px;
+}
+
+.my-page-header {
+  height: 70px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid blue 2px;
+}
+
+
+.left-list li {
+  padding-left: 15px;
+  display: inline;
+}
+
+.link, .logout {
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.right-list {
+  margin-right: 18px;
 }

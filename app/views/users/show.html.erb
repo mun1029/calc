@@ -1,50 +1,41 @@
 <% case @user.framework.framework_id %>
-<% when 1 %>
-  <%= stylesheet_link_tag "framework/simple", :media => "all" %>
-<% when 2 %>
+  <% when 1 %>
+    <%= stylesheet_link_tag "framework/simple", :media => "all" %>
+  <% when 2 %>
     <%= stylesheet_link_tag "framework/colk", :media => "all" %>
-<% when 3 %>
+  <% when 3 %>
     <%= stylesheet_link_tag "framework/cat", :media => "all" %>
 <% end %> 
-
-<%= render "shared/second-header" %>
-<div class='user-show-contents'>
-  <div class='user-info'>
-    <%= render 'follow_form' %>
-    <%= render 'stats' %>
-    <div class='image-rap'>
-      <% if @user.image.present? %>
-        <%= image_tag user.image.variant(resize: '280x280'), class: 'hidden' if current_user.image.attached? %>
-      <% else %>
-        <%= image_tag "logo.png", class: 'hidden' %>
-      <% end%>
-    </div>
-    <div class='user-rap'>
-      <p><span class='info'>ユーザー名 :</span> <%= @user.nickname %></p>
-      <p><span class='info'>年齢 :</span> <%= @user.age %></p>
-      <p><span class='info'>性別 :</span> <%= @user.gender %></p>
-    </div>
-  </div>
-  <div class=" right-content">
-    <div class="rooms">
-      <p> 投稿日記 </p>
-      <%= link_to 'ルーム作成', new_room_path %>
-      <% current_user.rooms.each do |room| %>
-        <div class="room">
-            <%= link_to room.name, room_path(room.id), class: "link" %>
-        </div>
-      <% end %>
-    </div>
-    <div class="lists">
-      <p>つぶやき</P>
-      <div class="list">
-        <%= flash[:notDestroy] %>
-        <%= flash[:destroy] %>
-        <% current_user.lists.each do |list| %>
-          <%= link_to list.list_name, list_path(list.id) %>
+<div class='wrapper'>
+  <%= render "shared/header" %>
+  <div class='main'>
+    <div class='user-info'>
+      <%= render "follow_form" %>
+      <%= render "stats" %>
+      <div class='image-rap'>
+        <% if @user.image.present? %>
+          <%= image_tag user.image, class: 'user-image' if current_user.image.attached? %>
+        <% else %>
+          <%= image_tag "logo.png", class: 'user-image'%>
+        <% end%>
+      </div>
+      <div class="user-rap">
+        <p><span class='info'>ユーザー名 :</span> <%= @user.nickname %></p>
+        <% if @user.age.present? %>
+          <p><span class='info'>年齢 :</span> <%= @user.age %></p>
+        <%end%>
+        <% if @user.gender.present?%>
+          <p><span class='info'>性別 :</span> <%= @user.gender %></p>
         <% end %>
       </div>
     </div>
+    <div class="right-content">
+      <div class="diary-list">
+        <p> 投稿日記 </p>
+        <%= link_to 'ルーム作成', new_room_path %>
+      </div>
+    </div>
   </div>
+  <%= render "shared/footer" %>
 </div>
 

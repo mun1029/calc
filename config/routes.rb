@@ -13,8 +13,7 @@ Rails.application.routes.draw do
     end
   end
   resources :relationships,       only: [:create, :destroy]
-  resources :lists,               only: [:new, :create, :show, :destroy, :edit, :update]
-  resources :rooms,               only: [:show, :new, :create, :destroy] do
+  resources :rooms,               only: [:index, :new, :create, :destroy] do
     resources :messages,          only: [:index,  :create]
   end
 end

@@ -12,4 +12,13 @@ function menuBtn() {
     }
   });
 }
+
 window.addEventListener('load', menuBtn)
+
+document.addEventListener("turbolinks:load", () => {
+  function scrollToEnd() {
+    const messageDetails = document.getElementById("scroll-inner");
+    messageDetails.scrollTop = messageDetails.scrollHeight;
+  } 
+  scrollToEnd()
+});

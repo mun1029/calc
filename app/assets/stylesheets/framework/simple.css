@@ -1,63 +1,96 @@
-.user-show-contents {
-
+.user-show-contents, .stats {
+  display: flex;
+  justify-content: center;
 }
 
+.wrapper {
+  background-image: url("/images/show.png");
+  display: block;
+  height: 100vh;
+}
+
+.main {
+  height: calc(100% - 80px - 90px);
+  border: solid snow 3px;
+  display: flex;
+  justify-content: center;
+}
+
+.user-info, .right-content {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: black solid 1px;
+  margin: 20px 60px;
+  border-radius: 5px;
+}
 .user-info {
-  background-color:white;
-  height: 370px;
-  width: 30%;
-  margin-top: 60px;
-  padding-top: 40px;
-  border-radius: 8px;
-  transform:rotate(-4deg);
-  border: rgb(105, 35, 35) solid 4px;
-  
+  border-radius: 5px;
+  width: 280px;
+  height: 90%;
+  padding: 20px;
+  overflow: hidden;
 }
 
 .right-content {
-  height: 30px;
-  width: 40%;
-  display: block;
-  margin-left: 50px;
-  padding-top: 30px;
+  width: 400px;
+  height: 300px;
 }
 
-.rooms, .lists {
-  background-color: rgb(5, 5, 5);
-  height: 250px;
-  width: 80%;
-  padding-top: 25px;
-  border-radius: 8px;
-  border: rgb(105, 35, 35) solid 4px;
-  
-}
+.diary-list {
 
-.rooms p, .lists p {
-  font-size: 18px;
-}
-
-.rooms {
-  transform:rotate(5deg);
-}
-
-.lists{
-  transform:rotate(-3deg);
-  margin-top: 45px;
 }
 
 .user-rap {
-  height: 100px;
-  margin: 10px 0px 0px 20px;
+  margin: 10px 20px;
 }
 
 .info {
   font-size: 18px;
 }
 
-.rooms, .lists, .image-rap {
-  text-align: center;
+.image-rap {
+  margin: 30px 30px 20px 30px;
+}
+
+.user-image {
+  width: 100%;
+  border-radius: 70px;
 }
 
 .hidden {
   width: 25vw;
 }
+
+
+.followings {
+  margin-right: 15px;
+}
+
+.header-top-lain {
+  background-color: grey;
+  height: 15px;
+}
+
+.my-page-header {
+  height: 70px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid blue 2px;
+}
+
+
+.left-list li {
+  padding-left: 15px;
+  display: inline;
+}
+
+.link, .logout {
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.right-list {
+  margin-right: 18px;
+}
+

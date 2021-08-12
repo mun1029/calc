@@ -1,17 +1,6 @@
 class RoomsController < ApplicationController
-
+  
   def index
-    @rooms = Room.includes(:user)
-    @user = User.find(params[:id])
-  end
-
-  def show
-    @room = Room.find(params[:id])
-
-  end
-
-  def new
-    @room = Room.new
   end
   
   def create
