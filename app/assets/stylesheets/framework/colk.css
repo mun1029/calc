@@ -1,45 +1,40 @@
-.user-show-contents, .stats {
+.wrapper {
+  background-image: url("/images/corkBoard.jpg");
+  background-size: 100% 100%;
+  height: calc(100vh - 80px - 90px);
+  display: flex;
+  border: solid 4px snow;
+}
+
+.stats {
   display: flex;
   justify-content: center;
 }
 
-.user-info {
-  border-radius: 8px;
+.user-info, .right-content {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: black solid 1px;
+  margin: 20px 60px;
+  border-radius: 5px;
 }
-
 .user-info {
-  background-color:white;
-}
-
-.user-show-contents {
-  background-image: url("/images/CorkBoard02.jpg");
-  height: 100vh;
-  width: 100%;
+  border-radius: 5px;
+  width: 350px;
+  height: 70%;
   padding: 20px;
-  
-}
-
-.user-info {
-  width: 30%;
-  margin-top: 60px;
-  padding-top: 40px;
-  transform:rotate(-4deg);
-  border: rgb(105, 35, 35) solid 4px;
-  
+  overflow: hidden;
 }
 
 .right-content {
-  height: 30px;
-  width: 40%;
-  display: block;
-  margin-left: 50px;
-  padding-top: 30px;
+  margin-left: 20px;
+  width: 400px;
+  height: 300px;
 }
 
 
 .user-rap {
-  height: 100px;
-  margin: 10px 0px 0px 20px;
+  font-size: 18px;
+  margin: 10px 20px;
 }
 
 .info {
@@ -50,9 +45,8 @@
   text-align: center;
 }
 
-.user-none-image {
-  height: 180px;
-  width: 180px;
+.user-image {
+  width: 70%;
   border-radius: 70px;
 }
 
@@ -62,34 +56,10 @@
 
 
 .followings {
-  margin-right: 15px;
+  margin-right: 30px;
 }
 
-.header-top-lain {
-  background-color: grey;
-  height: 15px;
-}
-
-.my-page-header {
-  height: 70px;
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: solid blue 2px;
-}
-
-
-.left-list li {
-  padding-left: 15px;
-  display: inline;
-}
-
-.link, .logout {
-  font-size: 17px;
+.link {
+  font-size: 20px;
   text-decoration: none;
-}
-
-.right-list {
-  margin-right: 18px;
 }

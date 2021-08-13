@@ -6,9 +6,8 @@
   <% when 3 %>
     <%= stylesheet_link_tag "framework/cat", :media => "all" %>
 <% end %> 
+<%= render "shared/header" %>
 <div class='wrapper'>
-  <%= render "shared/header" %>
-  <div class='main'>
     <div class='user-info'>
       <%= render "follow_form" %>
       <%= render "stats" %>
@@ -21,21 +20,16 @@
       </div>
       <div class="user-rap">
         <p><span class='info'>ユーザー名 :</span> <%= @user.nickname %></p>
-        <% if @user.age.present? %>
-          <p><span class='info'>年齢 :</span> <%= @user.age %></p>
-        <%end%>
-        <% if @user.gender.present?%>
-          <p><span class='info'>性別 :</span> <%= @user.gender %></p>
-        <% end %>
+        <p><span class='info'>年齢 :</span> <%= @user.age %></p>
+        <p><span class='info'>性別 :</span> <%= @user.gender %></p>
       </div>
     </div>
-    <div class="right-content">
-      <div class="diary-list">
-        <p> 投稿日記 </p>
-        <%= link_to 'ルーム作成', new_room_path %>
+    <div class='right-content'>
+      <div class ='user-coment'>
+        <span class='box-title'>コメント</span>
+        <p>test<p>
       </div>
     </div>
-  </div>
-  <%= render "shared/footer" %>
 </div>
+<%= render "shared/footer" %>
 
