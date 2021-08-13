@@ -1,0 +1,21 @@
+.wrappe {
+  background-image: url("/images/top.jpg");
+  background-size: 100% 100%;
+  width: 100vw;
+  height: calc(100vh - 80px - 90px);
+}
+ 
+.sign-up-form {
+  background-color: rgba(39, 38, 38, 0.5);
+  color: snow;
+  width: 300px;
+  height: 85%;
+  margin: 40px 20px 0 auto;
+  padding: 10px 30px;
+  overflow: scroll;
+}
+
+.field-group, .form-group {
+  margin-top: 10px;
+}
+

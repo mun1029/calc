@@ -1,0 +1,15 @@
+<%= stylesheet_link_tag "devise/signup", :media => "all" %>
+<%= render "shared/header" %>
+<div class='wrappe'>
+  <div class='sign-up-form'
+    <%= form_with model: @framework, url: framework_path, method: :post, local: true do |f| %>
+    <%= render "devise/shared/error_messages", resource: @framework %>
+    <%= f.collection_select(:framework_id, Frame.all, :id, :name, {}, {class:"-select"}) %>
+
+    <div class='actions'>
+      <%= f.submit "登録" %>
+    </div>
+    <% end %>
+  </div>
+</div>
+<%= render "shared/footer" %>

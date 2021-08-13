@@ -1,17 +1,22 @@
-<div class='header-top-lain'>
-</div>
-<header class='my-page-header'>
+<header class='header'>
   <%= link_to image_tag("logo.png", class:"logo"), root_path %>
-  <ul class='right-list'>
+  <div class='left-list'>
     <% if user_signed_in? %>
-      <ul class='right-list'>
-        <li><%= link_to current_user.nickname, user_path(current_user.id), class: "link"%></li>
-        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-      </li>
-    <% else %>
-      <ul class='left-list'>
-        <li><%= link_to 'ログイン', new_user_session_path, class: "link" %></li>
-        <li><%= link_to '新規登録', new_user_registration_path, class: "link" %></li>
-      </ul>
+      <%= link_to image_tag("home_icon.png", class: "home-icon"), user_path(current_user)%>
+      <%= link_to image_tag("message_icon.png", class: "message-icon"), rooms_path %>
     <% end %>
+  </div>
+  <div class='right-list'>
+   <% if user_signed_in? %>
+      <div class='right-list'>
+        <%= link_to current_user.nickname, user_path(current_user), class: "link"%></li>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      </div>
+    <% else %>
+      <div class='left-list'>
+        <div><%= link_to 'ログイン', new_user_session_path, class: "link" %></li>
+        <div><%= link_to '新規登録', new_user_registration_path, class: "link" %></li>
+      </div>
+    <% end %>
+  </ul>
 </header>

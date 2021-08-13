@@ -1,0 +1,31 @@
+.header {
+  height: 80px;
+  background-color: hsla(0, 50%, 96%, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid dimgrey 2px;
+}
+
+.logo {
+  height: 65px;
+  width: 80px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+
+.left-list {
+  padding-top:20px;
+}
+
+.home-icon {
+  margin: 0px 17px 5px 0px;
+  height: 45px;
+  width: 45px;
+}
+
+.message-icon {
+  height: 50px;
+  width: 50px;
+}

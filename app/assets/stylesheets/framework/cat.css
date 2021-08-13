@@ -1,0 +1,95 @@
+.user-show-contents, .stats {
+  display: flex;
+  justify-content: center;
+}
+
+.user-info {
+  border-radius: 8px;
+}
+
+.user-info {
+  background-color:white;
+}
+
+.user-show-contents {
+  background-image: url("/images/CorkBoard02.jpg");
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  
+}
+
+.user-info {
+  width: 30%;
+  margin-top: 60px;
+  padding-top: 40px;
+  transform:rotate(-4deg);
+  border: rgb(105, 35, 35) solid 4px;
+  
+}
+
+.right-content {
+  height: 30px;
+  width: 40%;
+  display: block;
+  margin-left: 50px;
+  padding-top: 30px;
+}
+
+
+.user-rap {
+  height: 100px;
+  margin: 10px 0px 0px 20px;
+}
+
+.info {
+  font-size: 18px;
+}
+
+.image-rap {
+  text-align: center;
+}
+
+.user-none-image {
+  height: 180px;
+  width: 180px;
+  border-radius: 70px;
+}
+
+.hidden {
+  width: 25vw;
+}
+
+
+.followings {
+  margin-right: 15px;
+}
+
+.header-top-lain {
+  background-color: grey;
+  height: 15px;
+}
+
+.my-page-header {
+  height: 70px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid blue 2px;
+}
+
+
+.left-list li {
+  padding-left: 15px;
+  display: inline;
+}
+
+.link, .logout {
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.right-list {
+  margin-right: 18px;
+}

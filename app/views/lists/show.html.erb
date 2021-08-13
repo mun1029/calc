@@ -1,8 +1,6 @@
 <%= render "shared/second-header" %>
 <div class='contents'>
   <%= flash[:update] %>
-  <%= flash[:destroy] %>
-  <%= flash[:notDestroy] %>
   <div class='lists-rap'>
     <div class='list-name'>
       <%= @list.list_name %>
@@ -26,5 +24,6 @@
       </ul>
     </div>
     <%= link_to '削除', list_path, method: :delete %>
+    <%= link_to '編集', edit_list_path %>
   </div>
 </div>

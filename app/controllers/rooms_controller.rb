@@ -1,16 +1,16 @@
 class RoomsController < ApplicationController
-
-  def show
-    @room = Room.find(params[:id])
-  end
-
-  def new
-    @lists = current_user.lists
-    @room = Room.new
+  before_action :authenticate_user!
+  
+  def index
   end
   
   def create
-    Room.create(room_params)
+    @room = Room.new(room_params)
+    if @room.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def destroy
@@ -22,6 +22,10 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:name, :list_id, user_ids: [])
+    params.require(:room).permit(:name, user_ids: [])
+  end
+
+  def set_room
+    @room = Room.find(params[:id])
   end
 end

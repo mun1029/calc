@@ -1,0 +1,75 @@
+.wrapper {
+  background-image: url("/images/show.png");
+  display: flex;
+  justify-content: space-around;
+  height: calc(100vh - 80px - 90px);
+  border: solid 4px snow;
+  padding: 10px 70px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.user-info {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: black solid 1px;
+  margin: 20px 0px;
+  border-radius: 5px;
+}
+.user-info {
+  border-radius: 5px;
+  width: 350px;
+  height: 90%;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.right-content {
+  background-color: snow;
+  margin: 20px 50px 0px 50px;
+  width: 450px;
+  height: 90%;
+}
+
+.user-coment {
+  height: 40%;
+  background-color: rgb(247, 141, 11);
+}
+
+.user-rap {
+  font-size: 18px;
+  margin: 10px 20px;
+}
+.user-rap p {
+  margin-bottom: 5px;
+}
+
+.info {
+  font-size: 18px;
+}
+
+.image-rap {
+  text-align: center;
+}
+
+.user-image {
+  width: 70%;
+  border-radius: 70px;
+}
+
+.hidden {
+  width: 25vw;
+}
+
+
+.followings {
+  margin-right: 30px;
+}
+
+.link {
+  font-size: 20px;
+  text-decoration: none;
+}
