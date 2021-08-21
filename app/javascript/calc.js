@@ -1,21 +1,37 @@
-function menuBtn() {
-  const menuBtn = document.getElementById("menu-btn")
-
-  document.getElementById("side-content").style.display ="none";
-  menuBtn.addEventListener('click', function(){
-    const sideContent = document.getElementById("side-content")
-
-    if(sideContent.style.display=="block"){
-      sideContent.style.display ="none";
-    }else{
-      sideContent.style.display ="block";
-    }
+function userNew() {
+  const nextBtn = document.getElementById('next-btn')
+  const backBtn = document.getElementById('back-btn')
+  const firstGroup = document.getElementById('first-group')
+  const secondGroup = document.getElementById('second-group')
+  
+  nextBtn.addEventListener('click', function(){
+    firstGroup.setAttribute('style', 'display:none;')
+    secondGroup.setAttribute('style', 'display:block;')
+  });
+  backBtn.addEventListener('click', function(){
+    secondGroup.setAttribute('style', 'display:none;')
+    firstGroup.setAttribute('style', 'display:block;')
   });
 }
+window.addEventListener('load', userNew)
 
-window.addEventListener('load', menuBtn)
+function frameworkNew() {
+ 
+  const formSelect = document.getElementById('select')
+  const frameworkImage = document.getElementById('framework-image')
 
-document.addEventListener("turbolinks:load", () => {
+  frameworkImage.innerHTML = `<img src="assets/logo.png" class='new-framework-image'>`
+  formSelect.onchange = function(){
+    if (this.value == 1) {
+      frameworkImage.innerHTML = `<img src="assets/logo.png" class='new-framework-image'>`
+    } else if (this.value == 2) {
+      frameworkImage.innerHTML = `<img src="assets/home_icon.png" class='new-framework-image'>`
+    }
+  };
+}
+window.addEventListener('load', frameworkNew)
+
+document.addEventListener('load', () => {
   function scrollToEnd() {
     const messageDetails = document.getElementById("scroll-inner");
     messageDetails.scrollTop = messageDetails.scrollHeight;

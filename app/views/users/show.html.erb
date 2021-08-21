@@ -9,25 +9,31 @@
 <%= render "shared/header" %>
 <div class='wrapper'>
     <div class='user-info'>
-      <%= render "follow_form" %>
-      <%= render "stats" %>
       <div class='image-rap'>
         <% if @user.image.present? %>
           <%= image_tag user.image, class: 'user-image' if current_user.image.attached? %>
         <% else %>
           <%= image_tag "logo.png", class: 'user-image'%>
         <% end%>
+        <%= render "follow_form" %>
+        <%= render "stats" %>
       </div>
-      <div class="user-rap">
-        <p><span class='info'>ユーザー名 :</span> <%= @user.nickname %></p>
-        <p><span class='info'>年齢 :</span> <%= @user.age %></p>
-        <p><span class='info'>性別 :</span> <%= @user.gender %></p>
+      <div class='user-rap'>
+        <P>マイページ編集</p>
+        <p>メッセージ</p>
+        <div claa='user-show'>
+          <span class='user-show-name'><%= @user.nickname %>さんの詳細</span>
+          <p><span class='info'>年齢 :</span> <%= @user.age %></p>
+          <p><span class='info'>性別 :</span> <%= @user.gender %></p>
+        </div>
       </div>
     </div>
     <div class='right-content'>
-      <div class ='user-coment'>
-        <span class='box-title'>コメント</span>
-        <p>test<p>
+      <div class ='user-comment'>
+        <p>コメント</p>
+      </div>
+      <div class='diary-list'>
+        <p>投稿日記</p>
       </div>
     </div>
 </div>
