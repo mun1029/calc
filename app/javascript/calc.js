@@ -26,10 +26,26 @@ function frameworkNew() {
       frameworkImage.innerHTML = `<img src="assets/logo.png" class='new-framework-image'>`
     } else if (this.value == 2) {
       frameworkImage.innerHTML = `<img src="assets/home_icon.png" class='new-framework-image'>`
-    }
+    };
   };
 }
 window.addEventListener('load', frameworkNew)
+
+function headerPullDown(){
+
+  const rightList = document.getElementById('right-list')
+  const headerPullDown = document.getElementById('pull-down')
+
+  headerPullDown.setAttribute('style','display:none;')
+  rightList.addEventListener('click', function(){
+    if (headerPullDown.getAttribute('style') == 'display:none;') {
+      headerPullDown.removeAttribute('style','display:block;')
+    } else {
+      headerPullDown.setAttribute('style','display:none;')
+    }
+  });
+}
+window.addEventListener('load', headerPullDown)
 
 document.addEventListener('load', () => {
   function scrollToEnd() {
